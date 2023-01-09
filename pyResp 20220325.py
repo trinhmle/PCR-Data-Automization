@@ -32,9 +32,9 @@ import timeit
 
 start = timeit.default_timer()
 
-fileRT = '/Users/trinhle/Desktop/Resp_20220325_01_TL RT.xlsx'
-fileSampleLog = '/Users/trinhle/Desktop/Resp_20220325_01_TL.xlsx'
-fileQuantSummary = '/Users/trinhle/Desktop/Resp_20220325_01_TL -  Quantification Summary.xlsx'
+fileRT = './Resp_20220325_01_TL RT.xlsx'
+fileSampleLog = './Resp_20220325_01_TL.xlsx'
+fileQuantSummary = './Resp_20220325_01_TL -  Quantification Summary.xlsx'
 
 wbRT = load_workbook(fileRT)
 wbSL = load_workbook(fileSampleLog)
@@ -204,7 +204,7 @@ for row in range (1, 500):
         
     if wsRT[cellNumberType].value == 'Unkn':
         if wsRT[cellNumberCT].value != None :
-            print(str(wsRT[cellNumberName].value + ' ' + str(wsRT[cellNumberCT].value)) + ' ' + str(wsRT[cellNumberPositive].value))
+            #print(str(wsRT[cellNumberName].value + ' ' + str(wsRT[cellNumberCT].value)) + ' ' + str(wsRT[cellNumberPositive].value))
             if wsRT[cellNumberPositive].value == 'NEGATIVE':
          
                 if wsRT[cellNumberRE].value != 'RE3-IC (EAV)':
