@@ -87,7 +87,7 @@ posRE = []
 posName = []
 posCT = []
 
-#print('------POSITIVE RESULTS-----')
+print('------POSITIVE RESULTS-----')
 ## grab all positve results
 ##-------------------------------POSTIVE-------------------------------
 for row in range (1, 500):
@@ -112,7 +112,7 @@ for row in range (1, 500):
             
             
             if wsRT[cellNumberRE].value != 'RE3-IC (EAV)':
-                    #print('%-15s' % str(wsRT[cellNumberName].value) + ' ' + '%-20s' % str(wsRT[cellNumberRE].value) + ' ' + '%-5s' % str("{:.2f}".format(wsRT[cellNumberCT].value)))
+                    print('%-15s' % str(wsRT[cellNumberName].value) + ' ' + '%-20s' % str(wsRT[cellNumberRE].value) + ' ' + '%-5s' % str("{:.2f}".format(wsRT[cellNumberCT].value)))
                     posRE.append(str(wsRT[cellNumberRE].value))
                     posName.append(str(wsRT[cellNumberName].value))
                     posCT.append(str("{:.2f}".format(wsRT[cellNumberCT].value)))
@@ -142,7 +142,7 @@ reviewName = []
 reviewRE = []
 reviewCT = []
 
-#print('-----REIVEW RESULTS-----')                
+print('-----REIVEW RESULTS-----')                
 ##check review results
 
 for row in range (1, 500):   
@@ -155,7 +155,7 @@ for row in range (1, 500):
     
     if wsRT[cellNumberType].value == 'Unkn':
         if wsRT[cellNumberReview].value == 'Review':
-            #print('%-15s' % str(wsRT[cellNumberName].value) + ' ' + '%-20s' % str(wsRT[cellNumberRE].value) + ' ' + '%-5s' % str("{:.2f}".format(wsRT[cellNumberCT].value)))
+            print('%-15s' % str(wsRT[cellNumberName].value) + ' ' + '%-20s' % str(wsRT[cellNumberRE].value) + ' ' + '%-5s' % str("{:.2f}".format(wsRT[cellNumberCT].value)))
             reviewName.append(str(wsRT[cellNumberName].value))
             reviewRE.append(str(wsRT[cellNumberRE].value))
             reviewCT.append(str("{:.2f}".format(wsRT[cellNumberCT].value)))
@@ -190,7 +190,7 @@ negRE = []
 negName = []
 negCT = []
 
-#print('-----CT but Negative-----')
+print('-----CT but Negative-----')
 for row in range (1, 500):   
 ##change range for more samples
     cellNumberType = charType + str(row)
@@ -204,12 +204,12 @@ for row in range (1, 500):
         
     if wsRT[cellNumberType].value == 'Unkn':
         if wsRT[cellNumberCT].value != None :
-            ##print(str(wsRT[cellNumberName].value + ' ' + str(wsRT[cellNumberCT].value)) + ' ' + str(wsRT[cellNumberPositive].value))
+            print(str(wsRT[cellNumberName].value + ' ' + str(wsRT[cellNumberCT].value)) + ' ' + str(wsRT[cellNumberPositive].value))
             if wsRT[cellNumberPositive].value == 'NEGATIVE':
          
                 if wsRT[cellNumberRE].value != 'RE3-IC (EAV)':
                     
-                    #print('%-15s' % str(wsRT[cellNumberName].value) + ' ' + '%-20s' % str(wsRT[cellNumberRE].value) + '%-5s' % str("{:.2f}".format(wsRT[cellNumberCT].value)))
+                    print('%-15s' % str(wsRT[cellNumberName].value) + ' ' + '%-20s' % str(wsRT[cellNumberRE].value) + '%-5s' % str("{:.2f}".format(wsRT[cellNumberCT].value)))
                     negName.append(str(wsRT[cellNumberName].value))
                     negRE.append(str(wsRT[cellNumberRE].value))
                     negCT.append(str("{:.2f}".format(wsRT[cellNumberCT].value)))
